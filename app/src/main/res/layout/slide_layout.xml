@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivSlide1"
+        android:layout_width="281dp"
+        android:layout_height="313dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="130dp"
+
+        app:srcCompat="@drawable/motivation1" />
+
+    <TextView
+        android:id="@+id/tvSlide1"
+        android:layout_width="248dp"
+        android:layout_height="127dp"
+        android:layout_below="@id/ivSlide1"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="36dp"
+
+
+        android:text="@string/focus_on_the_step_in_front_of_you_not_the_whole_staircase"
+        android:textAllCaps="true"
+        android:textColor="#708A81"
+        android:textSize="26sp"
+        android:textStyle="bold|italic" />
+</RelativeLayout>

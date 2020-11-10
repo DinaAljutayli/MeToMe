@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MeToMe</string>
+    <string name="focus_on_the_step_in_front_of_you_not_the_whole_staircase">Focus on the step in front of you, not the whole staircase.</string>
+    <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="artist">Artist</string>
+    <string name="reader">Reader</string>
+    <string name="writer">Writer</string>
+</resources>

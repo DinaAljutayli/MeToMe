@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoriesActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="491dp"
+        android:layout_height="392dp"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginTop="-90dp"
+        android:background="@drawable/circle_dark_blue"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearlayout">
+
+        <LinearLayout
+            android:layout_width="408dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvArtist"
+                android:layout_width="344dp"
+                android:layout_height="96dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/login_shape"
+                android:contentDescription="TODO"
+                android:gravity="center_horizontal"
+                android:padding="28dp"
+                android:text="@string/artist"
+                android:textAlignment="center"
+                android:textColor="#ffff"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/tvReader"
+                android:layout_width="344dp"
+                android:layout_height="96dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/login_shape"
+                android:contentDescription="TODO"
+                android:gravity="center_horizontal"
+                android:padding="28dp"
+                android:text="@string/reader"
+                android:textAlignment="center"
+                android:textColor="#ffff"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWriter"
+                android:layout_width="344dp"
+                android:layout_height="96dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:background="@drawable/login_shape"
+                android:textSize="30dp"
+                android:text="@string/writer"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                android:padding="28dp"
+                android:contentDescription="TODO"
+                android:gravity="center_horizontal" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -10,14 +10,14 @@
 
 
     <LinearLayout
-        android:background="@drawable/login_shape"
-        android:orientation="vertical"
         android:layout_width="313dp"
         android:layout_height="521dp"
         android:layout_marginLeft="140dp"
-        android:layout_marginRight="-40dp"
         android:layout_marginTop="120dp"
-        android:layout_marginBottom="90dp">
+        android:layout_marginRight="-40dp"
+        android:layout_marginBottom="90dp"
+        android:background="@drawable/login_shape"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvSignup"
@@ -31,16 +31,36 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvEmail"
+            android:id="@+id/tvProfileFullName"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/full_name"
+            android:textColor="#ffff"
+
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/etFullname"
+            android:layout_width="222dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/login_shape"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
             android:text="@string/username"
             android:textColor="#ffff"
-            android:textSize="20sp"
 
-            />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/etUsername"
@@ -51,13 +71,14 @@
             android:ems="10"
             android:inputType="textPersonName" />
 
+
         <TextView
 
             android:id="@id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/email"
             android:textColor="#ffff"
             android:textSize="20sp" />
@@ -76,12 +97,11 @@
             android:id="@+id/tvPassword"
             android:layout_width="101dp"
             android:layout_height="34dp"
-            android:text="@string/password"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="@string/password"
             android:textColor="#ffff"
-            />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -94,13 +114,12 @@
 
     </LinearLayout>
 
-
     <Button
         android:id="@+id/btnSignup"
         android:layout_width="171dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="205dp"
-        android:layout_marginTop="610dp"
+        android:layout_marginTop="620dp"
         android:background="@drawable/circle_dark_blue"
         android:text="@string/sign_up"
         android:textColor="#ffff"

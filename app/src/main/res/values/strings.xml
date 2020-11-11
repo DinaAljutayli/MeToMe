@@ -10,4 +10,7 @@
     <string name="artist">Artist</string>
     <string name="reader">Reader</string>
     <string name="writer">Writer</string>
+    <string name="full_name">Full Name</string>
+    <string name="logout">Logout</string>
+    <string name="welcome">Welcome..!</string>
 </resources>

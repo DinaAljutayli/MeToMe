@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArtistActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearlayoutArtist"
+        android:layout_width="match_parent"
+        android:layout_height="253dp"
+        android:layout_marginLeft="-9dp"
+        android:layout_marginTop="-90dp"
+        android:background="@drawable/categories_shape"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="51dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/abc_vector_test"
+            android:backgroundTint="#ffff" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearlayoutArtist">
+
+        <LinearLayout
+
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="283dp">
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="183dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/painter1" />
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="183dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/painter4" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="284dp">
+
+                <ImageView
+                    android:layout_width="185dp"
+                    android:layout_height="209dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/painter3" />
+
+
+                <ImageView
+                    android:layout_width="181dp"
+                    android:layout_height="225dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/painter2" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvOldMan"
+            android:layout_width="178dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/circle_dark_blue"
+            android:gravity="center"
+            android:text="Old Man"
+            android:textColor="#ffff"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tvOldWomen"
+            android:layout_width="178dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/circle_dark_blue"
+            android:gravity="center"
+            android:text="Old Women"
+            android:textColor="#ffff"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tvhope"
+            android:layout_width="178dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="480dp"
+            android:background="@drawable/circle_dark_blue"
+            android:gravity="center"
+            android:text="Hope"
+            android:textColor="#ffff"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tvShomokh"
+            android:layout_width="178dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="480dp"
+            android:background="@drawable/circle_dark_blue"
+            android:gravity="center"
+            android:text="Shomokh"
+            android:textColor="#ffff"
+            android:textSize="26sp" />
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

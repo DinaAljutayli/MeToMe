@@ -32,7 +32,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tvEmail"
+            android:id="@+id/tvUsername"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
@@ -44,11 +44,12 @@
             />
 
         <EditText
-            android:id="@+id/etFullname"
+            android:id="@+id/etUsername"
             android:layout_width="222dp"
             android:layout_height="56dp"
             android:layout_marginLeft="30dp"
             android:background="@drawable/login_shape"
+           android:textColor="#ffffff"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -71,7 +72,10 @@
             android:layout_marginLeft="30dp"
             android:background="@drawable/login_shape"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:hint="*******"
+            android:inputType="textPersonName"
+            android:textColor="#ffffff"
+            android:textColorHint="#FFFFFF" />
 
 
     </LinearLayout>

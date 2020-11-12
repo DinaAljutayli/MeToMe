@@ -35,7 +35,7 @@
 
 
         <TextView
-            android:id="@+id/tvProfileFullName"
+            android:id="@+id/tvFullName"
             android:layout_width="144dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"

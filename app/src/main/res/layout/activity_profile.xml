@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context="com.example.metome.ProfileActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -15,13 +15,25 @@
         android:layout_marginTop="50dp"
         app:srcCompat="@drawable/profile" />
 
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAddUpdataPhoto"
+        android:layout_width="40dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="350dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginBottom="355dp"
+        android:background="@drawable/ic_action_add"
+        android:onClick="btnAddUpdatePhoto"/>
+
     <TextView
         android:layout_width="108dp"
         android:layout_height="362dp"
         android:layout_marginLeft="67dp"
         android:layout_marginTop="50dp"
         android:background="#A6284854"
-        />
+        android:layout_marginStart="67dp" />
 
 
     <LinearLayout
@@ -31,7 +43,8 @@
         android:layout_marginLeft="-40dp"
         android:layout_marginTop="440dp"
         android:background="@drawable/login_shape"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginStart="-40dp">
 
 
         <TextView
@@ -42,7 +55,8 @@
             android:layout_marginTop="20dp"
             android:text="@string/full_name"
             android:textColor="#A6284854"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:layout_marginStart="60dp" />
 
         <TextView
             android:id="@+id/tvprofilefullname"
@@ -50,7 +64,8 @@
             android:layout_height="51dp"
             android:layout_marginLeft="60dp"
             android:textColor="#ffff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="60dp" />
 
         <TextView
             android:id="@+id/tvProfileEmail"
@@ -59,7 +74,8 @@
             android:layout_marginLeft="60dp"
             android:text="@string/email"
             android:textColor="#ffff"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:layout_marginStart="60dp" />
 
         <TextView
             android:id="@+id/tvprofilemail"
@@ -67,7 +83,8 @@
             android:layout_height="51dp"
             android:layout_marginLeft="60dp"
             android:textColor="#ffff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="60dp" />
 
 
 

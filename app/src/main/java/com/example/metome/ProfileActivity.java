@@ -30,4 +30,14 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
     }
+
+
+    public void btnAddUpdatePhoto(View view)
+    {
+
+    }
+
+
+
+
 }

@@ -11,12 +11,13 @@ import androidx.annotation.Nullable;
 public class DatabaseHelper extends SQLiteOpenHelper{
 
     private static final String DATABASE_NAME = "MeToMe.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     private static final String TABLE_USER = "user";
     private static final String COL_USER_NAME = "full_name";
     private static final String COL_USER_USERNAME= "username";
     private static final String COL_USER_EMAIL = "email";
     private static final String COL_USER_PASSWORD = "password";
+    private static final String COL_IMAGE = "image";
 
 
 
@@ -28,9 +29,12 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         final String queryUser = "CREATE TABLE " + TABLE_USER + " ("+
                 COL_USER_USERNAME + " TEXT PRIMARY KEY, " +
+                COL_IMAGE + " TEXT, " +
                 COL_USER_NAME + " TEXT, " +
                 COL_USER_EMAIL + " TEXT, " +
                 COL_USER_PASSWORD + " TEXT);";
+
+
 
         db.execSQL(queryUser);
 
@@ -43,6 +47,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     }
 
+
+
+    // insert column image
     public long addUser(String name, String username, String email, String password){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -54,6 +61,17 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         cv.put(COL_USER_PASSWORD,password);
 
         long res = db.insert(TABLE_USER,null,cv);
+        return res;
+    }
+
+    public long addPhoto(String image)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv =  new ContentValues();
+
+        cv.put(COL_IMAGE,image);
+        long res = db.insert(TABLE_USER,null,cv);
+
         return res;
     }
 

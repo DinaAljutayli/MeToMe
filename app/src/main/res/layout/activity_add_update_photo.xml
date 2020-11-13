@@ -9,15 +9,15 @@
 
     <com.blogspot.atifsoftwares.circularimageview.CircularImageView
         android:id="@+id/ivClickProfile"
-        android:layout_width="201dp"
-        android:layout_height="203dp"
+        android:layout_width="118dp"
+        android:layout_height="123dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:background="@drawable/ic_action_camera" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnAddPhoto"
+        android:id="@+id/btnConfirmProfile"
         android:layout_width="78dp"
         android:layout_height="73dp"
         android:layout_alignParentEnd="true"
@@ -26,8 +26,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="30dp"
-        android:src="@drawable/ic_action_addphoto"
-
+        android:src="@drawable/ic_action_check"
 
         />
 

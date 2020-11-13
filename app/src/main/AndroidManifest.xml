@@ -17,22 +17,32 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".AddUpdatePhoto" />
+        <activity android:name=".AddUpdatePhoto"
+            android:theme="@style/AppTheme.ActionBar"/>
+
+
         <activity android:name=".ArtistActivity" />
-        <activity android:name=".ProfileActivity" />
+
+
+        <activity android:name=".ProfileActivity"/>
+
+
         <activity android:name=".CategoriesActivity" />
+
         <activity android:name=".SignUpActivity" />
+
         <activity android:name=".LoginActivity" />
-        <activity android:name=".LoginSignUpActivity"/>
+
+        <activity android:name=".LoginSignUpActivity" />
 
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/AppTheme" />
+            android:name=".MainActivity"/>
 
 
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme.ActionBar"/>
+
 
        <activity android:name=".SplashActivity"
            android:theme="@style/SplashScreen">

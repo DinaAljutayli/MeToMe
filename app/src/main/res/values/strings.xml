@@ -16,4 +16,6 @@
     <string name="great_things_never_came_from_comfort_zones">GREAT THINGS NEVER CAME FROM COMFORT ZONES</string>
     <string name="believe_in_yourself_and_anything_is_possible">BELIEVE IN YOURSELF AND ANYTHING IS POSSIBLE</string>
     <string name="skip">Skip</string>
+    <string name="name">Name:</string>
+    <string name="add_piece">add piece</string>
 </resources>

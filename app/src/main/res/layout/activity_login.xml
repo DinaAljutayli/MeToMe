@@ -75,7 +75,6 @@
             android:background="@drawable/login_shape"
             android:ems="10"
             android:gravity="center_horizontal"
-
             android:inputType="textPersonName"
             android:textColor="#ffffff" />
 
@@ -87,7 +86,7 @@
         android:layout_width="171dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="205dp"
-        android:layout_marginTop="610dp"
+        android:layout_marginTop="510dp"
         android:background="@drawable/circle_dark_blue"
         android:text="@string/login"
         android:textColor="#ffff"

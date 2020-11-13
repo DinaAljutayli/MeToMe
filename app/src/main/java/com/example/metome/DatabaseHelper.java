@@ -7,17 +7,29 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
+import com.example.metome.Adapters.ModelArtistRecord;
+
+import java.util.ArrayList;
+
 
 public class DatabaseHelper extends SQLiteOpenHelper{
 
     private static final String DATABASE_NAME = "MeToMe.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
+
     private static final String TABLE_USER = "user";
     private static final String COL_USER_NAME = "full_name";
     private static final String COL_USER_USERNAME= "username";
     private static final String COL_USER_EMAIL = "email";
     private static final String COL_USER_PASSWORD = "password";
     private static final String COL_IMAGE = "image";
+
+
+    private static final String TABLE_PIECE = "piece";
+    private static final String COL_PIECE_NAME = "piece_name";
+    private static final String COL_PIECE_ID = "piece_id";
+    private static final String COL_PIECE_IMAGE = "piece_image";
+
 
 
 
@@ -34,15 +46,20 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 COL_USER_EMAIL + " TEXT, " +
                 COL_USER_PASSWORD + " TEXT);";
 
-
+        final String queryPiece = "CREATE TABLE "+ TABLE_PIECE + " (" +
+                COL_PIECE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "+
+                COL_PIECE_NAME + " TEXT, " +
+                COL_PIECE_IMAGE + " TEXT);";
 
         db.execSQL(queryUser);
+        db.execSQL(queryPiece);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_PIECE);
         onCreate(db);
 
     }
@@ -91,6 +108,48 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         else
             return false;
 
+    }
+
+
+    public long addPiece(String image, String name)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COL_PIECE_IMAGE,image);
+        cv.put(COL_PIECE_NAME,name);
+
+        long res = db.insert(TABLE_PIECE,null,cv);
+
+        return res;
+    }
+
+
+
+
+    public ArrayList<ModelArtistRecord> getAllPiece(String orderBy)
+    {
+        ArrayList<ModelArtistRecord> recordsList = new ArrayList<>();
+
+        String selectQuery = "SELECT * FROM "+ TABLE_PIECE + " ORDER BY " + orderBy ;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery,null);
+
+        if(cursor.moveToFirst())
+        {
+            do {
+                ModelArtistRecord modelArtistRecord = new ModelArtistRecord(
+                        ""+cursor.getString(cursor.getColumnIndex(COL_PIECE_IMAGE)),
+                        ""+cursor.getString(cursor.getColumnIndex(COL_PIECE_NAME)));
+
+                recordsList.add(modelArtistRecord);
+            }while (cursor.moveToNext());
+
+            db.close();
+
+        }
+        return recordsList;
     }
 
 

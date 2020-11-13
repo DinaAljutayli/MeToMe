@@ -2,6 +2,7 @@ package com.example.metome;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -26,7 +27,9 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 public class AddUpdatePhoto extends AppCompatActivity {
 
     CircularImageView ivProfile;
-    FloatingActionButton btnAddPhoto;
+    FloatingActionButton btnConfirmProfile;
+
+     ActionBar actionBar;
 
     private static final int CAMERA_REQUEST_CODE = 100;
     private static final int STORAGE_REQUEST_CODE = 101;
@@ -45,9 +48,16 @@ public class AddUpdatePhoto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_update_photo);
 
+        actionBar = getSupportActionBar();
+
+        actionBar.setTitle("Add profile photo");
+
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
 
         ivProfile = findViewById(R.id.ivClickProfile);
-        btnAddPhoto = findViewById(R.id.btnAddPhoto);
+        btnConfirmProfile = findViewById(R.id.btnConfirmProfile);
 
         cameraPermissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
@@ -57,7 +67,11 @@ public class AddUpdatePhoto extends AppCompatActivity {
        ivProfile.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               
+
+               Intent intent = new Intent(AddUpdatePhoto.this,ProfileActivity.class);
+
+
+
                imagePickDialog();
 
            }
@@ -65,21 +79,31 @@ public class AddUpdatePhoto extends AppCompatActivity {
 
        });
 
-       btnAddPhoto.setOnClickListener(new View.OnClickListener() {
+        btnConfirmProfile.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
 
                inputPhoto();
+               Intent intent = new Intent(AddUpdatePhoto.this,ProfileActivity.class);
+
+
+
+
 
            }
        });
     }
 
-    private void inputPhoto() {
-        DatabaseHelper db = new DatabaseHelper(this);
-        db.addUser("Dina_A", "Dina","Dina@gmail.com","12");
-        db.addPhoto(""+imageUri);
+    @Override
+    public boolean onSupportNavigateUp() {
 
+        onBackPressed();
+        return super.onSupportNavigateUp();
+    }
+
+    public void inputPhoto() {
+        DatabaseHelper db = new DatabaseHelper(this);
+        db.addPhoto(""+imageUri);
         Toast.makeText(this,"photo added",Toast.LENGTH_SHORT).show();
     }
 
@@ -252,5 +276,7 @@ public class AddUpdatePhoto extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+
 }
 

@@ -25,7 +25,7 @@
             android:layout_height="101dp"
             android:layout_marginLeft="298dp"
             android:layout_marginTop="140dp"
-            android:background="@drawable/profile"
+            android:src="@drawable/ic_action_profile"
             android:onClick="inClickProfile" />
 
         <TextView

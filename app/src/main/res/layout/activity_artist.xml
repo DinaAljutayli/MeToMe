@@ -10,8 +10,8 @@
 
     <LinearLayout
         android:id="@+id/linearlayoutArtist"
-        android:layout_width="match_parent"
-        android:layout_height="253dp"
+        android:layout_width="420dp"
+        android:layout_height="178dp"
         android:layout_marginLeft="-9dp"
         android:layout_marginTop="-90dp"
         android:background="@drawable/categories_shape"
@@ -28,119 +28,33 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPieceArtist"
+        android:layout_width="match_parent"
+        android:layout_height="448dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="152dp"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/artist_record">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/btnAdd_piece"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linearlayoutArtist">
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="49dp"
+        android:onClick="btnAdd_piece"
+        android:text="@string/add_piece">
 
-        <LinearLayout
-
-            android:id="@+id/linearlayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="283dp">
-
-                <ImageView
-                    android:layout_width="180dp"
-                    android:layout_height="183dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="40dp"
-                    android:background="@drawable/painter1" />
-
-                <ImageView
-                    android:layout_width="180dp"
-                    android:layout_height="183dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="40dp"
-                    android:background="@drawable/painter4" />
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="284dp">
-
-                <ImageView
-                    android:layout_width="185dp"
-                    android:layout_height="209dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/painter3" />
-
-
-                <ImageView
-                    android:layout_width="181dp"
-                    android:layout_height="225dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/painter2" />
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <TextView
-            android:id="@+id/tvOldMan"
-            android:layout_width="178dp"
-            android:layout_height="61dp"
-            android:layout_marginLeft="23dp"
-            android:layout_marginTop="200dp"
-            android:background="@drawable/circle_dark_blue"
-            android:gravity="center"
-            android:text="Old Man"
-            android:textColor="#ffff"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/tvOldWomen"
-            android:layout_width="178dp"
-            android:layout_height="61dp"
-            android:layout_marginLeft="220dp"
-            android:layout_marginTop="200dp"
-            android:background="@drawable/circle_dark_blue"
-            android:gravity="center"
-            android:text="Old Women"
-            android:textColor="#ffff"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/tvhope"
-            android:layout_width="178dp"
-            android:layout_height="61dp"
-            android:layout_marginLeft="23dp"
-            android:layout_marginTop="480dp"
-            android:background="@drawable/circle_dark_blue"
-            android:gravity="center"
-            android:text="Hope"
-            android:textColor="#ffff"
-            android:textSize="26sp" />
-
-        <TextView
-            android:id="@+id/tvShomokh"
-            android:layout_width="178dp"
-            android:layout_height="61dp"
-            android:layout_marginLeft="220dp"
-            android:layout_marginTop="480dp"
-            android:background="@drawable/circle_dark_blue"
-            android:gravity="center"
-            android:text="Shomokh"
-            android:textColor="#ffff"
-            android:textSize="26sp" />
-
-
-
-
-    </RelativeLayout>
+    </Button>
 
 
 </RelativeLayout>

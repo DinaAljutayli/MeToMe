@@ -19,7 +19,7 @@ public class CategoriesActivity extends AppCompatActivity {
 
     public void inClickProfile(View view)
     {
-        Intent intent = new Intent(this,AddUpdatePhoto.class);
+        Intent intent = new Intent(this,ProfileActivity.class);
         startActivity(intent);
     }
 }

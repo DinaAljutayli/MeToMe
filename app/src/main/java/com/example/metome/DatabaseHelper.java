@@ -18,8 +18,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     private static final String COL_USER_EMAIL = "email";
     private static final String COL_USER_PASSWORD = "password";
 
-    SQLiteDatabase db;
-
 
 
     public DatabaseHelper(@Nullable Context context){
@@ -27,10 +25,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate(SQLiteDatabase db) {
         final String queryUser = "CREATE TABLE " + TABLE_USER + " ("+
+                COL_USER_USERNAME + " TEXT PRIMARY KEY, " +
                 COL_USER_NAME + " TEXT, " +
-                COL_USER_USERNAME + "String PRIMARY KEY, " +
                 COL_USER_EMAIL + " TEXT, " +
                 COL_USER_PASSWORD + " TEXT);";
 
@@ -39,7 +37,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
         onCreate(db);
 

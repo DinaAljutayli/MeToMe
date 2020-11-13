@@ -14,7 +14,7 @@ public class SignUpActivity extends AppCompatActivity {
     DatabaseHelper db;
 
     EditText etFullNameS, etUserNameSU, etEmail,etPasswordSU;
-    Button btnSignUp, btnsLogin, btnsSignup;
+    Button  btnsLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +28,9 @@ public class SignUpActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.etEmail);
         etPasswordSU = findViewById(R.id.etPasswordSU);
 
-        btnSignUp = findViewById(R.id.btnSignUp);
         btnsLogin = findViewById(R.id.btnsLogin);
-        btnsSignup = findViewById(R.id.btnsSignup);
+
+
 
         btnsLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,37 +40,29 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        btnsSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent SignUpIntent =  new Intent(SignUpActivity.this, SignUpActivity.class);
-                startActivity(SignUpIntent);
-            }
-        });
-
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String name = etFullNameS.getText().toString();
-                String username = etUserNameSU.getText().toString();
-                String email = etEmail.getText().toString();
-                String password = etPasswordSU.getText().toString();
-
-                long val = db.addUser(name, username, email, password);
-
-                if(val>0){
-
-                    Toast.makeText(SignUpActivity.this, "Sign Up Sucessfully!!" , Toast.LENGTH_SHORT).show();
-                    Intent signupIntent = new Intent(SignUpActivity.this, CategoriesActivity.class);
-                    startActivity(signupIntent);
-                }
-                else{
-                    Toast.makeText(SignUpActivity.this, "Not registered, please sign up", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
 
     }
+
+    public void btnSignUp(View view)
+    {
+
+        String name = etFullNameS.getText().toString();
+        String username = etUserNameSU.getText().toString();
+        String email = etEmail.getText().toString();
+        String password = etPasswordSU.getText().toString();
+
+        long val = db.addUser(name, username, email, password);
+
+        if(val>0){
+
+            Toast.makeText(SignUpActivity.this, "Sign Up successfully!!" , Toast.LENGTH_SHORT).show();
+            Intent signupIntent = new Intent(SignUpActivity.this, CategoriesActivity.class);
+            startActivity(signupIntent);
+        }
+        else{
+            Toast.makeText(SignUpActivity.this, "Error in registration ", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
 }

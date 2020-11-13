@@ -13,11 +13,13 @@
         android:layout_width="313dp"
         android:layout_height="521dp"
         android:layout_marginLeft="140dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="60dp"
         android:layout_marginRight="-40dp"
         android:layout_marginBottom="90dp"
         android:background="@drawable/login_shape"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginStart="140dp"
+        android:layout_marginEnd="-40dp">
 
         <TextView
             android:id="@+id/tvSignup"
@@ -28,7 +30,8 @@
             android:text="@string/sign_up"
             android:textColor="#ffffff"
             android:textSize="36sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginStart="30dp" />
 
         <TextView
             android:id="@+id/tvFullName"
@@ -39,16 +42,20 @@
             android:text="@string/full_name"
             android:textColor="#ffff"
 
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="30dp" />
 
         <EditText
-            android:id="@+id/etUsername"
+            android:id="@+id/etFullNameS"
             android:layout_width="222dp"
             android:layout_height="56dp"
             android:layout_marginLeft="30dp"
             android:background="@drawable/login_shape"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="30dp" />
 
 
         <TextView
@@ -60,7 +67,8 @@
             android:text="@string/username"
             android:textColor="#ffff"
 
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="30dp" />
 
         <EditText
 
@@ -70,7 +78,10 @@
             android:layout_marginLeft="30dp"
             android:background="@drawable/login_shape"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="30dp" />
 
 
         <TextView
@@ -81,7 +92,8 @@
             android:layout_marginTop="10dp"
             android:text="@string/email"
             android:textColor="#ffff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="30dp" />
 
         <EditText
 
@@ -91,7 +103,9 @@
             android:layout_marginLeft="30dp"
             android:background="@drawable/login_shape"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="30dp" />
 
         <TextView
             android:id="@+id/tvPasswordSU"
@@ -101,7 +115,8 @@
             android:layout_marginTop="10dp"
             android:text="@string/password"
             android:textColor="#ffff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="30dp" />
 
         <EditText
             android:id="@+id/etPasswordSU"
@@ -110,20 +125,24 @@
             android:layout_marginLeft="30dp"
             android:background="@drawable/login_shape"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="30dp" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnSignup"
+        android:id="@+id/btnSignUp11"
         android:layout_width="171dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
         android:layout_marginLeft="205dp"
         android:layout_marginTop="620dp"
         android:background="@drawable/circle_dark_blue"
+        android:onClick="btnSignUp"
         android:text="@string/sign_up"
         android:textColor="#ffff"
-        android:textSize="24dp" />
+        android:textSize="24sp" />
 
 
     <LinearLayout
@@ -147,11 +166,11 @@
             android:background="@drawable/circle_dark_blue"
             android:text="@string/login"
             android:textColor="#ffffff"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_marginStart="-30dp" />
 
         <Button
 
-            android:id="@+id/btnsSignup"
             android:layout_width="142dp"
             android:layout_height="64dp"
             android:layout_marginLeft="-30dp"
@@ -159,7 +178,8 @@
             android:background="@drawable/circle_dark_blue"
             android:text="@string/signup"
             android:textColor="#ffffff"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:layout_marginStart="-30dp" />
 
 
     </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.metome.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,8 @@ public class AdapterArtistRecord extends RecyclerView.Adapter<AdapterArtistRecor
 
         holder.tvPiece_name.setText(name);
         holder.ivPiece_image.setImageURI(Uri.parse(image));
+
+
     }
 
     @Override

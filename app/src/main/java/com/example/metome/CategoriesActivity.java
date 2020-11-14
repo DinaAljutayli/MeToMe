@@ -21,5 +21,6 @@ public class CategoriesActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(this,ProfileActivity.class);
         startActivity(intent);
+
     }
 }
